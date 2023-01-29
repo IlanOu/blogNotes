@@ -1,8 +1,7 @@
 <script>
   import { store } from '../store/store.js'
   import { RouterLink } from 'vue-router'
-  
-  
+    
   // créer une variable locale
   export default{
     components: {
@@ -37,11 +36,13 @@
       <RouterLink class="menuItems linksHover" to="/dashboard" @click="store.clearNote(); store.setUpAllTags(store.notes); store.editMode=true; store.setupMyNotes();">▸ Voir mes notes</RouterLink>
       <br>
       <RouterLink class="menuItems linksHover" to="/search" @click="store.clearNote(); store.setUpAllTags(store.dummyNotes.notes); store.AllMatchItems=store.dummyNotes.notes">▸ Trouver une note</RouterLink>
+      <br>
+      <RouterLink class="menuItems linksHover" to="/parameters">▸ Paramètres</RouterLink>
 
     </div>
     
   </main>
-  <a class="deconnection" @click="store.deconnect()">Déconnexion</a>
+  
 </template>
 
 
@@ -64,6 +65,7 @@
 
   h1{
     font-size: xx-large;
+    color: var(--text-color)
   }
 
   .logo{

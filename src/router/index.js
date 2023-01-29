@@ -10,6 +10,8 @@ import ViewNotes from "../views/FindNotes.vue";
 import LoginPage from "../views/Login.vue";
 import SignupPage from "../views/Signup.vue";
 
+import ParametersPage from "../views/ParametersPage.vue";
+
 
 
 
@@ -55,6 +57,11 @@ const router = createRouter({
       path: "/view/:id",
       name: "view",
       component: ViewPage,
+    },
+    {
+      path: "/parameters",
+      name: "parameters",
+      component: ParametersPage,
     }
   ],
 });

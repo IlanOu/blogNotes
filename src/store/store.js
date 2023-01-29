@@ -4,6 +4,9 @@ import router from "../router/index.js";
 
 export const store = reactive({
     
+
+
+    currentTheme: 'dark',
     isConnected: false,
 
     currentUsername: "",
@@ -27,9 +30,9 @@ export const store = reactive({
     notes: [],
     addNote(){
 
-        let id = JSON.parse(localStorage.getItem("numberOfPosts")).count
+        let id = JSON.parse(localStorage.getItem("parameters")).postCount
         id++
-        localStorage.setItem("numberOfPosts", JSON.stringify({count: id}))
+        localStorage.setItem("parameters", JSON.stringify({postCount: id}))
 
         // crée la note
        let thisNote = {name: this.currentName, content: this.msg, id: id, author: this.currentUsername, tags: this.currentTags.split(" "), color: "#ff0055", authorId: this.myId, isOnline: false}
@@ -96,8 +99,8 @@ export const store = reactive({
         if (!localStorage.getItem("datasConnections")){
             localStorage.setItem("datasConnections", JSON.stringify({users: []}))
         }
-        if (!localStorage.getItem("numberOfPosts")){
-            localStorage.setItem("numberOfPosts", JSON.stringify({count: 0}))
+        if (!localStorage.getItem("parameters")){
+            localStorage.setItem("parameters", JSON.stringify({postCount: 0}))
         }
         
         

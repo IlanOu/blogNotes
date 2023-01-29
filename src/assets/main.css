@@ -2,6 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
+
+
+:root {
+  --main-bg-color: #545569;
+  --text-color: white;
+  --buttons: #27283355;
+
+  --textarea-A: aqua;
+  --textarea-h1: rgb(255, 136, 0);
+  --textarea-h2: rgb(255, 187, 0);
+  --textarea-h3: rgb(255, 230, 0);
+  --textarea-h4: rgb(136, 255, 0);
+
+  --background-txtarea: #272833aa;
+
+  --background-gradient-first: rgba(42,40,52,1);
+  --background-gradient-second: rgba(85,87,107,1);
+}
+
+
+
+
+
 #app {
   /* max-width: 1280px; */
   /* margin: 0 auto; */
@@ -14,7 +37,7 @@
   width: 100%;
 
   
-  color: white;
+  color: var(--text-color);
 
   display: flex;
   align-items: center;
@@ -27,15 +50,14 @@
 
 
 
-  background-color: #545569;
-  background: linear-gradient(322deg, rgba(42,40,52,1) 0%, rgba(85,87,107,1) 100%);
+  background-color: var(--main-bg-color);
+  background: linear-gradient(322deg, var(--background-gradient-first) 0%, var(--background-gradient-second) 100%);
 }
 
 body{
   transition: all 0s linear;
-  background-color: #545569;
-
-  
+  background-color: var(--main-bg-color);
+  color: var(--text-color)
 }
 
 main{
@@ -46,30 +68,25 @@ main{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  color: var(--text-color);
 }
 
 
 .buttonBack {
   background-color: transparent;
+  /* color: transparent; */
+  color: var(--text-color);
 
-  font-size: large;
+  font-size:x-large;
   border: none;
 
   cursor: pointer;
-
-  background-image: url("../assets/Arrow.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  transform: scaleX(-1);
-  color: #ffffff00;
-
-  
 }
 
 .buttonPublish{
   background-color: transparent;
+  color: transparent;
 
   font-size: large;
   border: none;
@@ -81,7 +98,7 @@ main{
   background-size: contain;
   background-repeat: no-repeat;
 
-  color: #ffffff00;
+  
 }
 
 .buttonsParent{
@@ -93,8 +110,8 @@ main{
 }
 
 .button, select{
-  background: #27283355;
-  color: white;
+  background: var(--buttons);
+  color: var(--text-color);
 
   border: none;
   border-radius: 3px;
@@ -108,7 +125,7 @@ main{
 
   transition: all 0.15s linear;
 
-  
+  color: var(--text-color);
 }
 
 .chgCnxPge{
@@ -121,13 +138,13 @@ main{
 }
 
 .connectionPageBtn:hover{
-  background: #272833dd;
+  background: var(--buttons);
 
 }
 
 a,
 .menuItems {
-  color: rgb(248, 248, 248);
+  color: var(--text-color);
   transition: 0.4s;
 
   font-size:x-large;
@@ -136,7 +153,7 @@ a,
 }
 
 .linksHover:hover {
-  color: #fff;
+  color:var(--text-color);
 }
 
 .linksHover::before {
@@ -151,7 +168,7 @@ a,
   bottom: 5%;
   left: 0;
 
-  background-color: #fff;
+  background-color: var(--text-color);
   transform-origin: center;
 
   transform: scaleX(0);
@@ -185,23 +202,23 @@ h1{
 }
 
 .divPageContent a {
-  color: aqua;
+  color:var(--textarea-A)
 }
 
 .divPageContent h1 {
-  color: rgb(255, 136, 0);
+  color:var(--textarea-h1)
 }
 
 .divPageContent h2 {
-  color: rgb(255, 187, 0);
+  color:var(--textarea-h2)
 }
 
 .divPageContent h3 {
-  color: rgb(255, 230, 0);
+  color:var(--textarea-h3)
 }
 
 .divPageContent h4 {
-  color: rgb(136, 255, 0);
+  color:var(--textarea-h4)
 }
 
 .divPageContent blockquote{
@@ -221,17 +238,17 @@ h1{
 
 
 .txtArea{
-  width: 100%;
+  width: 120%;
   height: 70%;
 
   border-radius: 3px;
   border: none;
 
-  background-color: #272833aa;
+  background-color: var(--background-txtarea);
   
   resize: none;
 
-  color: white;
+  color: var(--text-color);
   outline: none;
 
   padding: 10px;
