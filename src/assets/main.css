@@ -1,0 +1,321 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+#app {
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  padding: 2rem;
+
+  font-weight: normal;
+
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+
+  
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  /* font-family: 'Jua', sans-serif; */
+  font-family: 'Quicksand', sans-serif;
+
+
+
+  background-color: #545569;
+  background: linear-gradient(322deg, rgba(42,40,52,1) 0%, rgba(85,87,107,1) 100%);
+}
+
+body{
+  transition: all 0s linear;
+  background-color: #545569;
+
+  
+}
+
+main{
+  width: 75%;
+  height: 80vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.buttonBack {
+  background-color: transparent;
+
+  font-size: large;
+  border: none;
+
+  cursor: pointer;
+
+  background-image: url("../assets/Arrow.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  transform: scaleX(-1);
+  color: #ffffff00;
+
+  
+}
+
+.buttonPublish{
+  background-color: transparent;
+
+  font-size: large;
+  border: none;
+
+  cursor: pointer;
+
+  background-image: url("../assets/Publish.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  color: #ffffff00;
+}
+
+.buttonsParent{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 100%;
+}
+
+.button, select{
+  background: #27283355;
+  color: white;
+
+  border: none;
+  border-radius: 3px;
+  
+  font-size: large;
+  padding: 10px;
+  
+  display: block;
+
+  cursor: pointer;
+
+  transition: all 0.15s linear;
+
+  
+}
+
+.chgCnxPge{
+  font-size: smaller;
+}
+
+.connectionPageBtn{
+  margin: 1%;
+  margin-bottom: 3%;
+}
+
+.connectionPageBtn:hover{
+  background: #272833dd;
+
+}
+
+a,
+.menuItems {
+  color: rgb(248, 248, 248);
+  transition: 0.4s;
+
+  font-size:x-large;
+
+  text-decoration: none;
+}
+
+.linksHover:hover {
+  color: #fff;
+}
+
+.linksHover::before {
+  content: "";
+
+  position: absolute;
+  display: block;
+
+  width: 100%;
+  height: 2px;
+  
+  bottom: 5%;
+  left: 0;
+
+  background-color: #fff;
+  transform-origin: center;
+
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.linksHover:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+h1{
+  font-size: xx-large;
+  text-transform: uppercase;
+}
+
+
+.divPageContent pre{
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgba(44, 44, 44, 0.514);
+  color: rgb(206, 206, 206)
+}
+
+.divPageContent table, td {
+  border: 1px solid rgb(194, 194, 194);
+  text-align: center;
+}
+.divPageContent table{
+  border-radius: 3px;
+}
+
+.divPageContent a {
+  color: aqua;
+}
+
+.divPageContent h1 {
+  color: rgb(255, 136, 0);
+}
+
+.divPageContent h2 {
+  color: rgb(255, 187, 0);
+}
+
+.divPageContent h3 {
+  color: rgb(255, 230, 0);
+}
+
+.divPageContent h4 {
+  color: rgb(136, 255, 0);
+}
+
+.divPageContent blockquote{
+  width: fit-content;
+  background-color: rgba(44, 44, 44, 0.514);
+  color: rgb(206, 206, 206);
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.divPageContent hr{
+  margin: 3%;
+  border: 1px solid #9f8ac471;
+}
+
+
+
+
+.txtArea{
+  width: 100%;
+  height: 70%;
+
+  border-radius: 3px;
+  border: none;
+
+  background-color: #272833aa;
+  
+  resize: none;
+
+  color: white;
+  outline: none;
+
+  padding: 10px;
+  margin: 5%;
+
+  overflow-y: scroll;
+
+  font-size: 100%;
+}
+
+.separator{
+  margin: 3%;
+  /* border: 1px solid #55576b; */
+  border-radius: 10px;
+  height: 1px;
+  /* background-color: #55576b; */
+  border: none;
+  background: linear-gradient(322deg, rgba(240,109,177,1) 0%, rgba(150,112,247,1) 49%, rgba(70,155,227,1) 100%);
+
+}
+
+input, input[type=text], input[type=password]{
+  border-radius: 3px;
+  border: none;
+  padding: 3px;
+  margin: 2%;
+  background-color: white;
+  outline: none;
+}
+
+button{
+  border-radius: 3px;
+  border: none;
+  outline: none;
+}
+
+select{
+  outline: none;
+
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+option{
+  background-color: #3b3c4b;
+}
+option:focus{
+  background-color: #3b3c4b;
+}
+
+.deconnection{
+  font-size: small;
+  cursor: pointer;
+}
+
+.deconnection:hover{
+  text-decoration: underline;
+}
+
+@media (hover: hover) {
+  
+
+  .button.save:hover{
+    background-color: rgba(69, 184, 121, 0.5);
+  }
+  
+  .button.clear:hover{
+    background-color: rgba(196, 69, 69, 0.5);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
